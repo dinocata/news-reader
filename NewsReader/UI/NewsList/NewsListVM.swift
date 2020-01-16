@@ -24,10 +24,16 @@ extension NewsListVM: ViewModelType {
     }
     
     struct Output {
-        
+        let articles: Driver<[Article]>
+        let loading: Driver<Bool>
     }
     
     func transform(input: Input) -> Output {
-        return Output()
+        let articles = articleService
+            .getArticles()
+            .asDriver(onErrorJustReturn: [])
+        
+        return Output(articles: articles,
+                      loading: .just(false))
     }
 }

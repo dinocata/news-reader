@@ -9,12 +9,17 @@
 import UIKit
 
 class NewsListVC: MVVMController<NewsListVM> {
-
+    
     override func bindInput() -> NewsListVM.Input {
         return NewsListVM.Input()
     }
     
     override func bindOutput(output: NewsListVM.Output) {
         // TODO: add implementation
+        output.articles
+            .drive(onNext: { data in
+                print(data.count)
+            })
+            .disposed(by: disposeBag)
     }
 }

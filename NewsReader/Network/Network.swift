@@ -19,6 +19,13 @@ struct NetworkError: Error {
     init(error: MoyaError?) {
         self.statusCode = error?.response?.statusCode ?? -1
         self.errorMessage = error?.errorDescription ?? "unknown error"
+        
+        #if DEBUG
+        if let error = error {
+            print(error.localizedDescription)
+            print(error)
+        }
+        #endif
     }
 }
 
