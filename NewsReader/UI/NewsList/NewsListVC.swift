@@ -7,19 +7,45 @@
 //
 
 import UIKit
+import RxCocoa
 
 class NewsListVC: MVVMController<NewsListVM> {
     
+    // Outlets
+    @IBOutlet weak var tvArticles: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "articles".localized
+        setupView()
+    }
+    
+    private func setupView() {
+        tvArticles.registerCellNib(ofType: NewsListCell.self)
+    }
+    
     override func bindInput() -> NewsListVM.Input {
-        return NewsListVM.Input()
+        let itemSelected = tvArticles.rx.itemSelected
+            .map { $0.row }
+            .asDriver(onErrorJustReturn: 0)
+        
+        return NewsListVM.Input(itemSelect: itemSelected)
     }
     
     override func bindOutput(output: NewsListVM.Output) {
-        // TODO: add implementation
+        output.loading
+            .drive(activityIndicator.rx.isAnimating)
+            .disposed(by: disposeBag)
+        
         output.articles
-            .drive(onNext: { data in
-                print(data.count)
-            })
+            .drive(tvArticles.rx
+                .items(cellIdentifier: NewsListCell.reuseID, cellType: NewsListCell.self)) { _, model, cell in
+                    cell.configure(with: model) }
+            .disposed(by: disposeBag)
+        
+        output.transition
+            .drive(transition)
             .disposed(by: disposeBag)
     }
 }

@@ -24,4 +24,9 @@ final class Constants {
             "Content-Type": "application/json"
         ]
     }
+    
+    class DateFormat {
+        static let defaultDateTime = "dd. MMM yyyy HH:mm"
+        static let apiDateTime = "yyyy-MM-dd'T'HH:mm:ssZ"
+    }
 }

@@ -10,7 +10,7 @@ import UIKit
 
 enum Scene {
     case newsList
-    case newsDetails
+    case newsDetails(article: Article)
 }
 
 extension Scene {
@@ -19,8 +19,10 @@ extension Scene {
         switch self {
         case .newsList:
             return UINavigationController(rootViewController: container.resolve(NewsListVC.self)!)
-        case .newsDetails:
-            return UIViewController()
+        case .newsDetails(let article):
+            let controller = container.resolve(ArticleDetailsVC.self)!
+            controller.article = article
+            return controller
         }
     }
     

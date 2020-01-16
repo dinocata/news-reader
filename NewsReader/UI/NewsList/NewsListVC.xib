@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsListVC" customModule="NewsReader" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="1i4-qw-dqP" id="iRL-Gy-zfT"/>
+                <outlet property="tvArticles" destination="hVi-Pz-Kgd" id="zEO-Ej-S8g"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,17 +20,22 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ew-cV-GnC">
-                    <rect key="frame" x="170" y="437.5" width="74.5" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hVi-Pz-Kgd">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1i4-qw-dqP">
+                    <rect key="frame" x="197" y="460" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="7ew-cV-GnC" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="hQb-zi-71u"/>
-                <constraint firstItem="7ew-cV-GnC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="x8I-Bk-76e"/>
+                <constraint firstAttribute="bottom" secondItem="hVi-Pz-Kgd" secondAttribute="bottom" id="3h8-Jb-p5X"/>
+                <constraint firstItem="1i4-qw-dqP" firstAttribute="centerY" secondItem="hVi-Pz-Kgd" secondAttribute="centerY" id="5j0-vC-M2L"/>
+                <constraint firstItem="1i4-qw-dqP" firstAttribute="centerX" secondItem="hVi-Pz-Kgd" secondAttribute="centerX" id="70z-H3-cJd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hVi-Pz-Kgd" secondAttribute="trailing" id="7O2-8N-jGG"/>
+                <constraint firstItem="hVi-Pz-Kgd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="BM3-sm-Ewn"/>
+                <constraint firstItem="hVi-Pz-Kgd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fi6-kI-wvu"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="114"/>

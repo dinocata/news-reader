@@ -31,6 +31,14 @@ class MVVMController<T: ViewModelType>: UIViewController {
         bindOutput(output: viewModel.transform(input: bindInput()))
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let actualController = actualViewController()
+        if actualController !== coordinator.currentViewController {
+            coordinator.currentViewController = actualController
+        }
+    }
+    
     func bindInput() -> T.Input {
         fatalError("createInput() has not been implemented")
     }

@@ -17,6 +17,7 @@ class ViewControllerContainer: ChildContainerProtocol {
         instance = Container(parent: parentContainer)
         
         registerVC(NewsListVC.self)
+        registerVC(ArticleDetailsVC.self)
         
         return instance
     }

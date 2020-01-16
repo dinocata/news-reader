@@ -7,6 +7,7 @@
 //
 
 import RxCocoa
+import RxSwift
 
 class NewsListVM {
     // Dependencies
@@ -20,20 +21,35 @@ class NewsListVM {
 // Binding
 extension NewsListVM: ViewModelType {
     struct Input {
-        
+        let itemSelect: Driver<Int>
     }
     
     struct Output {
-        let articles: Driver<[Article]>
+        let articles: Driver<[NewsListCell.Data]>
         let loading: Driver<Bool>
+        let transition: Driver<Scene>
     }
     
     func transform(input: Input) -> Output {
         let articles = articleService
             .getArticles()
-            .asDriver(onErrorJustReturn: [])
+            .asObservable()
+            .share()
+            
+        let articleData = articles
+            .map { $0.map(NewsListCell.Data.init) }
         
-        return Output(articles: articles,
-                      loading: .just(false))
+        let loading: Driver<Bool> = articles
+            .map { _ in false }
+            .startWith(true)
+            .asDriver(onErrorJustReturn: false)
+        
+        let transition = Observable.combineLatest(articles, input.itemSelect.asObservable())
+            .map { Scene.newsDetails(article: $0[$1]) }
+            .asDriver(onErrorJustReturn: .newsList)
+        
+        return Output(articles: articleData.asDriver(onErrorJustReturn: []),
+                      loading: loading,
+                      transition: transition)
     }
 }

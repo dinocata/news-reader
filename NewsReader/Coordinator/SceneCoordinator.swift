@@ -57,7 +57,8 @@ class SceneCoordinator: SceneCoordinatorType {
                                           animated: true,
                                           completion: completion)
         }
-        currentViewController = viewController
+        
+        currentViewController = viewController.actualViewController()
     }
     
     func pop(animated: Bool, completion: (() -> Void)?) {
@@ -69,7 +70,7 @@ class SceneCoordinator: SceneCoordinatorType {
             
         } else if let presenter = currentViewController.presentingViewController {
             currentViewController.dismiss(animated: animated, completion: completion)
-            self.currentViewController = presenter
+            self.currentViewController = presenter.actualViewController()
             
         } else {
             fatalError("Not a modal, no navigation controller: can't navigate back from \(currentViewController!)")

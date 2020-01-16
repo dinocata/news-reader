@@ -20,6 +20,10 @@ class ViewModelContainer: ChildContainerProtocol {
             NewsListVM(articleService: $0.resolve(ArticleService.self)!)
         }
         
+        instance.register(ArticleDetailsVM.self) { _ in
+            ArticleDetailsVM()
+        }
+        
         return instance
     }
 }
