@@ -15,12 +15,21 @@ enum Scene {
 
 extension Scene {
     var viewController: UIViewController {
-        // TODO: implement controllers
+        let container = ViewControllerContainer.instance!
         switch self {
         case .newsList:
-            return UINavigationController(rootViewController: UIViewController())
+            return UINavigationController(rootViewController: container.resolve(NewsListVC.self)!)
         case .newsDetails:
             return UIViewController()
+        }
+    }
+    
+    var defaultTransitionType: SceneTransition {
+        switch self {
+        case .newsList:
+            return .root
+        case .newsDetails:
+            return .push
         }
     }
 }

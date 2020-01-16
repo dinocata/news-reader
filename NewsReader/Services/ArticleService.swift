@@ -14,7 +14,7 @@ protocol ArticleService {
 
 class ArticleServiceImpl: ArticleService {
     // Dependencies
-    var network: NetworkProtocol
+    let network: NetworkProtocol
     
     init(network: NetworkProtocol) {
         self.network = network

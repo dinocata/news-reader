@@ -16,7 +16,9 @@ class ViewModelContainer: ChildContainerProtocol {
     static func build(parentContainer: Container) -> Container {
         instance = Container(parent: parentContainer, defaultObjectScope: .transient)
         
-        // TODO
+        instance.register(NewsListVM.self) {
+            NewsListVM(articleService: $0.resolve(ArticleService.self)!)
+        }
         
         return instance
     }

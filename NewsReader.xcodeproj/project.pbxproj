@@ -24,6 +24,11 @@
 		CB17BD7123D0DBC800F2917A /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17BD7023D0DBC800F2917A /* ArticleService.swift */; };
 		CB17BD7423D0DBE800F2917A /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17BD7323D0DBE800F2917A /* Article.swift */; };
 		CB17BD7723D0DCBF00F2917A /* ArticleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17BD7623D0DCBF00F2917A /* ArticleResponse.swift */; };
+		CB17BD7C23D0DEC600F2917A /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17BD7B23D0DEC600F2917A /* ViewModelType.swift */; };
+		CB17BD7E23D0DEEC00F2917A /* NewsListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17BD7D23D0DEEC00F2917A /* NewsListVM.swift */; };
+		CB17BD8223D0DFA600F2917A /* MVVMController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17BD8123D0DFA600F2917A /* MVVMController.swift */; };
+		CB17BD8523D0E0E500F2917A /* NewsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17BD8323D0E0E500F2917A /* NewsListVC.swift */; };
+		CB17BD8623D0E0E500F2917A /* NewsListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB17BD8423D0E0E500F2917A /* NewsListVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +52,11 @@
 		CB17BD7023D0DBC800F2917A /* ArticleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
 		CB17BD7323D0DBE800F2917A /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		CB17BD7623D0DCBF00F2917A /* ArticleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleResponse.swift; sourceTree = "<group>"; };
+		CB17BD7B23D0DEC600F2917A /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		CB17BD7D23D0DEEC00F2917A /* NewsListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListVM.swift; sourceTree = "<group>"; };
+		CB17BD8123D0DFA600F2917A /* MVVMController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMController.swift; sourceTree = "<group>"; };
+		CB17BD8323D0E0E500F2917A /* NewsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListVC.swift; sourceTree = "<group>"; };
+		CB17BD8423D0E0E500F2917A /* NewsListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsListVC.xib; sourceTree = "<group>"; };
 		CC3948C3EEE77D46E15149EC /* Pods_NewsReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -102,6 +112,8 @@
 			children = (
 				CB17BD5C23D0D48500F2917A /* DI */,
 				CB17BD6B23D0D75000F2917A /* Config */,
+				CB17BD7F23D0DF9200F2917A /* Common */,
+				CB17BD7A23D0DEB900F2917A /* Protocols */,
 				CB17BD6823D0D6D200F2917A /* Network */,
 				CB17BD6723D0D6C500F2917A /* Services */,
 				CB17BD5523D0D17C00F2917A /* Coordinator */,
@@ -181,8 +193,43 @@
 		CB17BD7823D0DDE000F2917A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				CB17BD7923D0DEA400F2917A /* NewsList */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		CB17BD7923D0DEA400F2917A /* NewsList */ = {
+			isa = PBXGroup;
+			children = (
+				CB17BD7D23D0DEEC00F2917A /* NewsListVM.swift */,
+				CB17BD8323D0E0E500F2917A /* NewsListVC.swift */,
+				CB17BD8423D0E0E500F2917A /* NewsListVC.xib */,
+			);
+			path = NewsList;
+			sourceTree = "<group>";
+		};
+		CB17BD7A23D0DEB900F2917A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CB17BD7B23D0DEC600F2917A /* ViewModelType.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CB17BD7F23D0DF9200F2917A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CB17BD8023D0DF9B00F2917A /* Base */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CB17BD8023D0DF9B00F2917A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CB17BD8123D0DFA600F2917A /* MVVMController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +292,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB17BD8623D0E0E500F2917A /* NewsListVC.xib in Resources */,
 				CB17BD4923D0C92200F2917A /* LaunchScreen.storyboard in Resources */,
 				CB17BD4623D0C92200F2917A /* Assets.xcassets in Resources */,
 			);
@@ -304,9 +352,13 @@
 				CB17BD6423D0D58400F2917A /* ViewModelContainer.swift in Sources */,
 				CB17BD6623D0D5B900F2917A /* ViewControllerContainer.swift in Sources */,
 				CB17BD5E23D0D4AE00F2917A /* ContainerProtocol.swift in Sources */,
+				CB17BD8523D0E0E500F2917A /* NewsListVC.swift in Sources */,
 				CB17BD5923D0D17C00F2917A /* SceneTransition.swift in Sources */,
+				CB17BD8223D0DFA600F2917A /* MVVMController.swift in Sources */,
 				CB17BD6F23D0DA6000F2917A /* Network.swift in Sources */,
+				CB17BD7E23D0DEEC00F2917A /* NewsListVM.swift in Sources */,
 				CB17BD7723D0DCBF00F2917A /* ArticleResponse.swift in Sources */,
+				CB17BD7C23D0DEC600F2917A /* ViewModelType.swift in Sources */,
 				CB17BD7123D0DBC800F2917A /* ArticleService.swift in Sources */,
 				CB17BD6D23D0D75900F2917A /* Constants.swift in Sources */,
 				CB17BD3D23D0C92000F2917A /* AppDelegate.swift in Sources */,

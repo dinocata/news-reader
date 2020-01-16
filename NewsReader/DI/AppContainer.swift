@@ -34,6 +34,11 @@ final class AppContainer: ContainerProtocol {
             ApiNetwork(provider: $0.resolve(MoyaProvider<ApiEndpoint>.self)!)
         }
         
+        // Article Service
+        instance.register(ArticleService.self) {
+            ArticleServiceImpl(network: $0.resolve(NetworkProtocol.self)!)
+        }
+        
         return instance
     }
 }
