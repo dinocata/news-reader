@@ -3,15 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		68990B103C5BCD17978A2DB5 /* Pods_NewsReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC3948C3EEE77D46E15149EC /* Pods_NewsReader.framework */; };
 		CB17BD3D23D0C92000F2917A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17BD3C23D0C92000F2917A /* AppDelegate.swift */; };
-		CB17BD3F23D0C92000F2917A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17BD3E23D0C92000F2917A /* SceneDelegate.swift */; };
 		CB17BD4623D0C92200F2917A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB17BD4523D0C92200F2917A /* Assets.xcassets */; };
 		CB17BD4923D0C92200F2917A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB17BD4723D0C92200F2917A /* LaunchScreen.storyboard */; };
+		CB17BD5823D0D17C00F2917A /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17BD5623D0D17C00F2917A /* Scene.swift */; };
+		CB17BD5923D0D17C00F2917A /* SceneTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17BD5723D0D17C00F2917A /* SceneTransition.swift */; };
+		CB17BD5B23D0D18C00F2917A /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17BD5A23D0D18C00F2917A /* SceneCoordinator.swift */; };
+		CB17BD5E23D0D4AE00F2917A /* ContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17BD5D23D0D4AE00F2917A /* ContainerProtocol.swift */; };
+		CB17BD6023D0D4C200F2917A /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17BD5F23D0D4C200F2917A /* AppContainer.swift */; };
+		CB17BD6423D0D58400F2917A /* ViewModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17BD6323D0D58400F2917A /* ViewModelContainer.swift */; };
+		CB17BD6623D0D5B900F2917A /* ViewControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17BD6523D0D5B900F2917A /* ViewControllerContainer.swift */; };
+		CB17BD6A23D0D6FA00F2917A /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17BD6923D0D6FA00F2917A /* ApiEndpoint.swift */; };
+		CB17BD6D23D0D75900F2917A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17BD6C23D0D75900F2917A /* Constants.swift */; };
+		CB17BD6F23D0DA6000F2917A /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17BD6E23D0DA6000F2917A /* Network.swift */; };
+		CB17BD7123D0DBC800F2917A /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17BD7023D0DBC800F2917A /* ArticleService.swift */; };
+		CB17BD7423D0DBE800F2917A /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17BD7323D0DBE800F2917A /* Article.swift */; };
+		CB17BD7723D0DCBF00F2917A /* ArticleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB17BD7623D0DCBF00F2917A /* ArticleResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,10 +31,22 @@
 		669473D98FDAE91A13F493E8 /* Pods-NewsReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsReader.debug.xcconfig"; path = "Target Support Files/Pods-NewsReader/Pods-NewsReader.debug.xcconfig"; sourceTree = "<group>"; };
 		CB17BD3923D0C92000F2917A /* NewsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB17BD3C23D0C92000F2917A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CB17BD3E23D0C92000F2917A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CB17BD4523D0C92200F2917A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB17BD4823D0C92200F2917A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB17BD4A23D0C92200F2917A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB17BD5623D0D17C00F2917A /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		CB17BD5723D0D17C00F2917A /* SceneTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneTransition.swift; sourceTree = "<group>"; };
+		CB17BD5A23D0D18C00F2917A /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
+		CB17BD5D23D0D4AE00F2917A /* ContainerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerProtocol.swift; sourceTree = "<group>"; };
+		CB17BD5F23D0D4C200F2917A /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		CB17BD6323D0D58400F2917A /* ViewModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelContainer.swift; sourceTree = "<group>"; };
+		CB17BD6523D0D5B900F2917A /* ViewControllerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerContainer.swift; sourceTree = "<group>"; };
+		CB17BD6923D0D6FA00F2917A /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
+		CB17BD6C23D0D75900F2917A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CB17BD6E23D0DA6000F2917A /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		CB17BD7023D0DBC800F2917A /* ArticleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
+		CB17BD7323D0DBE800F2917A /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		CB17BD7623D0DCBF00F2917A /* ArticleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleResponse.swift; sourceTree = "<group>"; };
 		CC3948C3EEE77D46E15149EC /* Pods_NewsReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -76,13 +100,89 @@
 		CB17BD3B23D0C92000F2917A /* NewsReader */ = {
 			isa = PBXGroup;
 			children = (
+				CB17BD5C23D0D48500F2917A /* DI */,
+				CB17BD6B23D0D75000F2917A /* Config */,
+				CB17BD6823D0D6D200F2917A /* Network */,
+				CB17BD6723D0D6C500F2917A /* Services */,
+				CB17BD5523D0D17C00F2917A /* Coordinator */,
+				CB17BD7223D0DBCC00F2917A /* Models */,
+				CB17BD7823D0DDE000F2917A /* UI */,
 				CB17BD3C23D0C92000F2917A /* AppDelegate.swift */,
-				CB17BD3E23D0C92000F2917A /* SceneDelegate.swift */,
 				CB17BD4523D0C92200F2917A /* Assets.xcassets */,
 				CB17BD4723D0C92200F2917A /* LaunchScreen.storyboard */,
 				CB17BD4A23D0C92200F2917A /* Info.plist */,
 			);
 			path = NewsReader;
+			sourceTree = "<group>";
+		};
+		CB17BD5523D0D17C00F2917A /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CB17BD5623D0D17C00F2917A /* Scene.swift */,
+				CB17BD5723D0D17C00F2917A /* SceneTransition.swift */,
+				CB17BD5A23D0D18C00F2917A /* SceneCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		CB17BD5C23D0D48500F2917A /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				CB17BD5D23D0D4AE00F2917A /* ContainerProtocol.swift */,
+				CB17BD5F23D0D4C200F2917A /* AppContainer.swift */,
+				CB17BD6523D0D5B900F2917A /* ViewControllerContainer.swift */,
+				CB17BD6323D0D58400F2917A /* ViewModelContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		CB17BD6723D0D6C500F2917A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CB17BD7023D0DBC800F2917A /* ArticleService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CB17BD6823D0D6D200F2917A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CB17BD7523D0DCB200F2917A /* ResponseModels */,
+				CB17BD6923D0D6FA00F2917A /* ApiEndpoint.swift */,
+				CB17BD6E23D0DA6000F2917A /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CB17BD6B23D0D75000F2917A /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				CB17BD6C23D0D75900F2917A /* Constants.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		CB17BD7223D0DBCC00F2917A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CB17BD7323D0DBE800F2917A /* Article.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CB17BD7523D0DCB200F2917A /* ResponseModels */ = {
+			isa = PBXGroup;
+			children = (
+				CB17BD7623D0DCBF00F2917A /* ArticleResponse.swift */,
+			);
+			path = ResponseModels;
+			sourceTree = "<group>";
+		};
+		CB17BD7823D0DDE000F2917A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +196,7 @@
 				CB17BD3523D0C92000F2917A /* Sources */,
 				CB17BD3623D0C92000F2917A /* Frameworks */,
 				CB17BD3723D0C92000F2917A /* Resources */,
+				9E475D0AF234C3E815FDBED4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -174,6 +275,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9E475D0AF234C3E815FDBED4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NewsReader/Pods-NewsReader-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NewsReader/Pods-NewsReader-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NewsReader/Pods-NewsReader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -181,8 +299,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB17BD7423D0DBE800F2917A /* Article.swift in Sources */,
+				CB17BD5823D0D17C00F2917A /* Scene.swift in Sources */,
+				CB17BD6423D0D58400F2917A /* ViewModelContainer.swift in Sources */,
+				CB17BD6623D0D5B900F2917A /* ViewControllerContainer.swift in Sources */,
+				CB17BD5E23D0D4AE00F2917A /* ContainerProtocol.swift in Sources */,
+				CB17BD5923D0D17C00F2917A /* SceneTransition.swift in Sources */,
+				CB17BD6F23D0DA6000F2917A /* Network.swift in Sources */,
+				CB17BD7723D0DCBF00F2917A /* ArticleResponse.swift in Sources */,
+				CB17BD7123D0DBC800F2917A /* ArticleService.swift in Sources */,
+				CB17BD6D23D0D75900F2917A /* Constants.swift in Sources */,
 				CB17BD3D23D0C92000F2917A /* AppDelegate.swift in Sources */,
-				CB17BD3F23D0C92000F2917A /* SceneDelegate.swift in Sources */,
+				CB17BD5B23D0D18C00F2917A /* SceneCoordinator.swift in Sources */,
+				CB17BD6023D0D4C200F2917A /* AppContainer.swift in Sources */,
+				CB17BD6A23D0D6FA00F2917A /* ApiEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +451,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NewsReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,6 +470,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NewsReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
